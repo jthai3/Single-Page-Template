@@ -1,0 +1,58 @@
+ul {
+    list-style: none;
+}
+
+a {
+    color: $link;
+    text-decoration: none;
+}
+
+a:visited {
+    color: $link;
+}
+
+h2 {
+    @include heading-sm;
+}
+
+h3 {
+    @include sub-heading-sm;
+}
+
+p,
+a,
+li {
+    @include body-sm;
+}
+
+@media #{$md-screen} {
+    h2 {
+        @include heading-md;
+    }
+
+    h3 {
+        @include sub-heading-md;
+    }
+
+    p,
+    a,
+    li {
+        @include body-md;
+    }
+}
+
+@media #{$lg-screen} {
+    h2 {
+        @include heading-lg;
+    }
+
+    h3 {
+        @include sub-heading-lg;
+    }
+
+    p,
+    a,
+    li {
+        @include body-lg;
+    }
+}

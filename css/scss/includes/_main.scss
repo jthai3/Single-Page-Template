@@ -1,0 +1,141 @@
+/*
+Table of Contents
+1. General Layout
+2. About Us Section
+3. Services Section
+4. Contact Us Section
+ */
+
+// 1. General Layout
+main {
+    width: 100%;
+    margin: 0 auto;
+
+    section {
+        min-height: 80vh;
+        padding: 20px 0;
+        background-color: $light-grey;
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+    }
+}
+
+section:nth-child(odd) {
+    background-color: $dark-grey;
+}
+
+// 2. About Us Section
+#about-us {
+    img {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        padding: 20px 0;
+    }
+}
+
+// 3. Services Section
+#services {
+    div[class*="service"] {
+        img {
+            width: 80%;
+            padding: 20px 0;
+        }
+
+        h3 {
+            padding: 20px 0;
+        }
+    }
+}
+
+@media #{$md-screen} {
+    #services {
+        div[class*="service"] {
+            display: grid;
+            grid-template-areas:
+                "a b"
+                "a d";
+            padding: 20px 0;
+
+            img {
+                grid-area: a;
+                padding-right: 20px;
+            }
+
+            h3 {
+                grid-area: b;
+            }
+
+            p {
+                grid-area: d;
+            }
+        }
+    }
+}
+
+// 4. Contact Us Section
+#contact-us {
+    .contact-info {
+        margin: 50px 0;
+
+        div {
+            margin: 25px 0;
+            text-align: center;
+            line-height: 1.5;
+
+            i {
+                font-size: 1.5em;
+                width: 50px;
+                height: 50px;
+                margin: 0 auto;
+                border: 1px solid $light-grey;
+                border-radius: 50%;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                background-color: $light-grey;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h3 {
+                margin: 10px 0;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media #{$md-screen} {
+    #contact-us {
+        .contact-info {
+            margin: 100px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            div {
+                i {
+                    font-size: 2.5em;
+                    width: 100px;
+                    height: 100px;
+                }
+
+                h3 {
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        img {
+            height: 500px;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+/*
+Table of Contents
+1. Navigation
+2. Hero
+ */
+
+//  1.Navigation
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    height: 160px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    background-color: $background;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "a b"
+        "c c";
+
+    ul li {
+        padding: 5px 10px;
+    }
+}
+
+.toggle-nav {
+    display: none;
+}
+
+.hamburger {
+    font-size: 2.5em;
+    background: none;
+    border: none;
+    grid-area: b;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    grid-area: a;
+
+    h3 {
+        display: none;
+    }
+}
+
+.menu {
+    grid-area: c;
+    text-align: center;
+    background: $background;
+    padding: 20px 0;
+
+    a {
+        padding: 20px 0;
+        display: block;
+    }
+}
+
+@media #{$md-screen} {
+    .navbar {
+        opacity: 0.5;
+    }
+
+    .navbarSquished {
+        -webkit-box-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);
+        height: 100px;
+        padding: 0;
+        opacity: 1;
+    }
+
+    nav {
+        grid-template-areas: "a b";
+    }
+
+    .brand h3 {
+        display: unset;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0;
+        padding-right: 50px;
+        grid-area: b;
+    }
+}
+
+// 2.Hero
+.hero {
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://via.placeholder.com/150x80");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    background: #00000020;
+    padding: 20px;
+    line-height: 1.5;
+    text-align: center;
+}

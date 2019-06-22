@@ -1,0 +1,96 @@
+/*
+Table of Contents
+1. Variables
+    A) Colors
+    B) Fonts
+    C) Media Queries
+2. Mixins
+    A) Fonts
+    B) Media Queries
+ */
+
+/*
+    1. Variables
+*/
+// A) Colours
+$dark-grey : #dedede;
+$light-grey : #ededed;
+$background: #888;
+$link: #C6C4C5;
+
+// B) Fonts
+$heading : 'Lato',
+sans-serif;
+$body : 'Montserrat',
+sans-serif;
+
+// C) Media Queries
+$md-screen: "(min-width: 45em)";
+$lg-screen: "(min-width: 90em)";
+
+/*
+    2. Mixins
+*/
+// A) Fonts
+@mixin heading-sm {
+    font-family: $heading;
+    font-size: 1.125em;
+}
+
+@mixin heading-md {
+    font-family: $heading;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+@mixin heading-lg {
+    font-family: $heading;
+    font-size: 2.250em;
+    font-weight: bold;
+}
+
+@mixin sub-heading-sm {
+    font-family: $heading;
+    font-size: 1.125em;
+}
+
+@mixin sub-heading-md {
+    font-family: $heading;
+    font-size: 1.25em;
+}
+
+@mixin sub-heading-lg {
+    font-family: $heading;
+    font-size: 1.8em;
+}
+
+@mixin body-sm {
+    font-family: $body;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+@mixin body-md {
+    font-family: $body;
+    font-size: 1.125em;
+    line-height: 1.5;
+}
+
+@mixin body-lg {
+    font-family: $body;
+    font-size: 1.250em;
+    line-height: 1.5;
+}
+
+// B) Media Queries
+@mixin tablet {
+    @media (min-width: #{$md-screen}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$lg-screen}) {
+        @content;
+    }
+}
